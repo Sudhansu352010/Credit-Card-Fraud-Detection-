@@ -23,7 +23,8 @@ Utilize machine learning algorithms to improve fraud detection accuracy.
 4. For example email spam or not. 
 
 
-![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/6e2b676e-2a00-447a-9b82-d9ed4f8bf0ec)
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/bc8bf903-887f-4628-bdc0-267779cfc146)
+
 
 # Decision Tree Classifier
 1. A decision tree is one of the most powerful tools of supervised learning algorithms used for both classification and regression tasks.
