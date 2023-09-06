@@ -21,10 +21,7 @@ Utilize machine learning algorithms to improve fraud detection accuracy.
 2. It is a kind of statistical algorithm, which analyze the relationship between a set of independent variables and the dependent binary variables.
 3. It is a powerful tool for decision-making.
 4. For example email spam or not. 
-Logistic regression is a supervised machine learning algorithm mainly used for classification tasks where the goal is to predict the probability that an instance of belonging to a given class or not.
-It is a kind of statistical algorithm, which analyze the relationship between a set of independent variables and the dependent binary variables.
-It is a powerful tool for decision-making.
-For example email spam or not.
+
 
 ![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/6e2b676e-2a00-447a-9b82-d9ed4f8bf0ec)
 
