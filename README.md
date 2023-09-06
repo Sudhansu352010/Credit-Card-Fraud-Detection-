@@ -1,4 +1,10 @@
-# Credit-Card-Fraud-Detection
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/3beed318-e44b-44d6-88f3-d36d03bc1467)![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/4d646558-d50f-409f-8b83-4ff9824378fa)![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/96296ff1-5b60-4fe2-9313-aa7539a314a0)![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/ab36e7fd-4844-4d5e-96e7-4e325d53f0eb)# Credit-Card-Fraud-Detection
+
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/176bf265-b6c9-44dd-9cc3-01b3603d74a9)
+
+# Tools & Technologies Used
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/61ae0c1a-1d79-412e-9ee0-155a7eb721e8)
+
 
 # PROBLEM STATEMENT
 The main objectives of this project are to:
@@ -6,133 +12,63 @@ Develop an accurate and efficient fraud detection system.
 Need a method that is simple and fast detecting most frauds misclassifying the least.
 Utilize machine learning algorithms to improve fraud detection accuracy.
 
-# Import all Necessary Libraries of Python
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-from  sklearn.model_selection import train_test_split
-from sklearn  import datasets,metrics,linear_model
-from sklearn.linear_model import LinearRegression,LogisticRegression
-from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.decomposition import PCA
-from sklearn.metrics import confusion_matrix,classification_report,accuracy_score
-from sklearn.metrics import r2_score,mean_squared_error
+# TIMELINE
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/1a4b1488-b27a-4e7a-b292-641276420d6c)
 
-# Import the Datasets
-df=pd.read_csv('creditcard.csv')
-df
+#  Details of Machine Learning Algorithm
+# Logistic Regression
+1. Logistic regression is a supervised machine learning algorithm mainly used for classification tasks where the goal is to predict the probability that an instance of belonging to a given class or not.
+2. It is a kind of statistical algorithm, which analyze the relationship between a set of independent variables and the dependent binary variables.
+3. It is a powerful tool for decision-making.
+4. For example email spam or not. 
+Logistic regression is a supervised machine learning algorithm mainly used for classification tasks where the goal is to predict the probability that an instance of belonging to a given class or not.
+It is a kind of statistical algorithm, which analyze the relationship between a set of independent variables and the dependent binary variables.
+It is a powerful tool for decision-making.
+For example email spam or not.
 
-# set the max columns to none
-pd.set_option('display.max_columns', None)
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/6e2b676e-2a00-447a-9b82-d9ed4f8bf0ec)
 
-# Check the Shape of Datasets
-df.shape
+# Decision Tree Classifier
+1. A decision tree is one of the most powerful tools of supervised learning algorithms used for both classification and regression tasks.
 
-df.drop('Time',axis=1,inplace=True)
+2. It builds a flowchart-like tree structure where each internal node denotes a test on an attribute, each branch represents an outcome of the test, and each leaf node (terminal node) holds a class label. 
 
-df.shape
+3. The goal is to find the attribute that maximizes the information gain or the reduction in impurity after the split.
+   
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/b077962f-74e4-4d9d-ae0c-7c4400c7f5fc)
 
-# Data Cleaning
-df.isnull().sum()
+# Random Forest Classifier
+1. We know that a forest comprises of numerous trees, and the more trees more it will be robust.
+2. Similarly, the greater the number of trees in a Random Forest Algorithm, the higher its accuracy and problem-solving ability.
+3. Random Forest is a classifier that contains several decision trees on various subsets of the given dataset and takes the average to improve the predictive accuracy of that dataset.
+4. It is based on the concept of ensemble learning which is a process of combining multiple classifiers to solve a complex problem and improve the performance of the model.
+   
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/1ba0ef7d-058c-43e0-9bee-9c1043dc64fd)
 
-# Check the Datatypes
-df.dtypes
 
-for i in df.columns:
-    print(i,df[i].sort_values().unique(),'\n',sep='\n')
 
-# Statsistical Summary of Datasets
-df.describe()
+# User's Manual
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/4ae8677a-2a6e-4f24-80f5-5403fd76621b)
 
-# Distribution of legit transactions & fraudulent transactions
-df['Class'].value_counts()
-plt.figure(figsize=(6,4))
-ax=sns.countplot(x='Class',data = df)
-for bars in ax.containers:
-    ax.bar_label(bars)
-plt.xticks(rotation=90)
-plt.show()
+# Methodology ( few code snippets )
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/91db335b-4de1-424e-a561-ce6eb3f14af0)
 
-# This Dataset is highly unblanced
 
-# 0-->Normal Transaction
-# 1-->Fraudulent Transaction
-#S eparating the data for analysis
-Legit=df[df.Class==0]
-Fraud=df[df.Class==1]
-print(Legit.shape)
-print(Fraud.shape)
+# Model's Prediction
+![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/129b72f7-e661-4683-84d8-2eeeb2f68092)
 
-# Statistical Measures of the Data
-Legit.Amount.describe()
-Fraud.Amount.describe()
+# Summary
+1.The use of machine learning techniques for credit card fraud detection is highly beneficial. 
+2. This project highlights the importance of accurate and efficient fraud detection systems in itigating financial losses. 
+3. Future applications and extensions of this project are worth exploring.
 
-# Under-Sampling
-# Build a sample dataset containing similar distribution of normal transactions and Fraudulent Transactions
-# Number of Fraudulent Transactions --> 492
-# Compare the values for both transactions
-df.groupby('Class').mean()
-Legit_sample=Legit.sample(n=492)
+# CHALLENGES FACED
+1. The main challenge in credit card fraud detection are:
+2. Huge Size of Data : millions of transactions are processed everyday.
+3. Imbalanced data set : more than 99% transactions  are  legitimate
+4. Adaptive techniques :  fraudsters change style of bluff detection system
+5. Availability of data :  bank  doesn’t reveal customer information.
 
-# Concatenating two DataFrames
-new_dataset=pd.concat([Legit_sample,Fraud],axis=0)
-new_dataset 
-new_dataset['Class'].value_counts()
-new_dataset.groupby('Class').mean()
-
-# Splitting the data into Features & Targets
-x=new_dataset.drop(columns='Class',axis=1)
-y=new_dataset['Class']
-
-# Split the data into Training data & Testing Data
-X_train,X_test,Y_train,Y_test=train_test_split(x,y,test_size=0.3,random_state=1)
-print(x.shape, X_train.shape, X_test.shape)
-
-models={
-    'Logistic Regression':LogisticRegression(random_state=5),
-    'Decision Tree':DecisionTreeClassifier(criterion='entropy',random_state=16),
-    'Random Forest':RandomForestClassifier(random_state=65)
-}
-
-for name, model in models.items():
-    model.fit(X_train,Y_train)
-    Y_pred=model.predict(X_test)
-    print(name , " : {:.2f}%".format(accuracy_score(Y_pred,Y_test)*100))
-    print("\n")
-    print(classification_report(Y_pred,Y_test))
-    print("\n")
-    sns.heatmap(confusion_matrix(Y_pred,Y_test),fmt='g',annot=True)
-    plt.show()
-    
-lg=LogisticRegression(random_state=5)
-lg.fit(X_train,Y_train)
-
-import pickle
-
-# Store the logistic regression model using pickle
-pickle.dump(lg, open('logistic_regression_model.pkl', 'wb'))
-
-# Load the stored model
-loaded_model=pickle.load(open('logistic_regression_model.pkl', 'rb'))
-
-# Create a test sample
-pred1 = np.array([2.08271, 0.083512, -1.348547, 0.355365, 0.364725, -0.731189, 0.064821, -0.350401, 2.022140, -0.481939, 0.187867, -2.157240, 1.843239, 1.882716, 0.203100, -0.329656, 0.194048, 0.313403, -0.421817, -0.264484, 0.114721, 0.739802, 0.018036, 0.569343, 0.332178, -0.481858, -0.019221, -0.054609, 1.0])
-
-# Reshape the input data for prediction
-pred1 = pred1.reshape(1, -1)
-
-# Make the prediction
-prediction = loaded_model.predict(pred1)
-
-# Print the predicted class
-if prediction[0] == 1:
-    print('Fraud')
-else:
-    print('Legit')
 
 
 
