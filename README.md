@@ -56,8 +56,8 @@ Utilize machine learning algorithms to improve fraud detection accuracy.
 ![image](https://github.com/Sudhansu352010/Credit-Card-Fraud-Detection-/assets/131376814/129b72f7-e661-4683-84d8-2eeeb2f68092)
 
 # Summary
-1.The use of machine learning techniques for credit card fraud detection is highly beneficial. 
-2. This project highlights the importance of accurate and efficient fraud detection systems in itigating financial losses. 
+1. The use of machine learning techniques for credit card fraud detection is highly beneficial.
+2. This project highlights the importance of accurate and efficient fraud detection systems in itigating financial losses.
 3. Future applications and extensions of this project are worth exploring.
 
 # CHALLENGES FACED
